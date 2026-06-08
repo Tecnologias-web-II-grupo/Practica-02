@@ -62,7 +62,7 @@ export default function Eje4Registro({ onAceptar }) {
       <div className="eje4-wrapper">
         <div className="rechazo-card">
           <h2>Acceso Denegado</h2>
-          <p>Debe tener minimo 21 anhos para participar en el juego.</p>
+          <p>Lo sentimos, debe tener minimo 21 anhos para participar en el juego.</p>
           <p>Redirigiendo en <strong>{contador}</strong> segundos...</p>
         </div>
       </div>
