@@ -1,0 +1,464 @@
+/* ---- CONTENEDOR GENERAL ---- */
+.eje4-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f4f4f4;
+}
+
+/* ---- REGISTRO ---- */
+.registro-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 36px;
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.registro-card h1 {
+  text-align: center;
+  color: #222222;
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.registro-card h2 {
+  color: #444444;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.registro-card p {
+  color: #777777;
+  font-size: 0.9rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  color: #555555;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  background: #fafafa;
+  color: #222222;
+  font-size: 1rem;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #888888;
+}
+
+.btn-principal {
+  padding: 12px;
+  background: #333333;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.btn-principal:hover {
+  background: #111111;
+}
+
+.btn-secundario {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #aaaaaa;
+  color: #666666;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+  border-color: #333333;
+  color: #333333;
+}
+
+.texto-error {
+  color: #cc0000;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* ---- PANTALLA RECHAZO ---- */
+.rechazo-card {
+  background: #fff5f5;
+  border: 1px solid #ffbbbb;
+  border-radius: 10px;
+  padding: 48px 36px;
+  text-align: center;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.rechazo-card h2 {
+  font-size: 1.8rem;
+  color: #cc0000;
+}
+
+.rechazo-card p {
+  color: #444444;
+  font-size: 1rem;
+}
+
+/* ---- JUEGO ---- */
+.juego-wrapper {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.cabecera-jugador {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  flex: 1;
+}
+
+.cabecera-montos {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #dddddd;
+}
+
+.monto-fila {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.monto-fila:last-child {
+  border-bottom: none;
+}
+
+.etiqueta {
+  background: #333333;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.valor {
+  font-size: 1rem;
+  color: #222222;
+  font-weight: bold;
+}
+
+.area-principal {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Seccion dados */
+.seccion-dados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-width: 180px;
+}
+
+.seccion-dados h3 {
+  color: #333333;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.dados-fila {
+  display: flex;
+  gap: 8px;
+}
+
+.dado-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.campo-apuesta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.campo-apuesta label {
+  font-size: 0.82rem;
+  color: #555555;
+  font-weight: 600;
+}
+
+.campo-apuesta input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  background: #fafafa;
+  color: #222222;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.campo-apuesta input:focus {
+  outline: none;
+  border-color: #888888;
+}
+
+.btn-jugar {
+  padding: 12px 24px;
+  background: #333333;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  letter-spacing: 4px;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+.btn-jugar:hover:not(:disabled) {
+  background: #111111;
+}
+
+.btn-jugar:disabled {
+  background: #aaaaaa;
+  cursor: not-allowed;
+}
+
+/* Tablero */
+.seccion-tablero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.seccion-tablero h3 {
+  color: #333333;
+  font-size: 1rem;
+}
+
+.tablero-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 58px);
+  gap: 4px;
+}
+
+.celda {
+  width: 58px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  transition: transform 0.1s;
+}
+
+.celda-bloqueada {
+  background: #dddddd;
+  cursor: default;
+}
+
+.celda-libre {
+  background: #e8e8e8;
+  color: #333333;
+  cursor: pointer;
+  border: 1px solid #cccccc;
+}
+
+.celda-libre:hover {
+  transform: scale(1.08);
+  background: #d0d0d0;
+}
+
+.celda-seleccionada {
+  background: #333333;
+  color: #ffffff;
+  transform: scale(1.12);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* Estatus */
+.seccion-estatus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 140px;
+}
+
+.seccion-estatus h3 {
+  color: #333333;
+  font-size: 1rem;
+}
+
+.icono-estatus {
+  font-size: 4rem;
+  line-height: 1;
+  color: #555555;
+}
+
+.img-estatus {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.msg-resultado {
+  font-size: 0.88rem;
+  color: #555555;
+  text-align: center;
+  max-width: 140px;
+}
+
+.consecutivas {
+  font-size: 0.82rem;
+  color: #333333;
+  font-weight: 600;
+  text-align: center;
+}
+
+.msg-fin {
+  text-align: center;
+  color: #333333;
+  font-size: 1rem;
+  animation: parpadeo 0.9s infinite;
+}
+
+@keyframes parpadeo {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* ---- RESULTADO ---- */
+.resultado-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  padding: 36px;
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.resultado-card h1 {
+  color: #222222;
+  font-size: 1.8rem;
+}
+
+.resultado-mensaje {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.msg-ganador {
+  background: #f0fff4;
+  border-color: #aaddbb;
+  color: #1a6b3a;
+}
+
+.msg-perdio {
+  background: #fff5f5;
+  border-color: #ffbbbb;
+  color: #cc0000;
+}
+
+.msg-empate {
+  background: #fafafa;
+  border-color: #cccccc;
+  color: #444444;
+}
+
+.msg-cero {
+  background: #fff0f0;
+  border-color: #ff9999;
+  color: #990000;
+}
+
+.tabla-final {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-final td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #eeeeee;
+  text-align: left;
+  color: #333333;
+}
+
+.tabla-final td:first-child {
+  color: #888888;
+  font-size: 0.88rem;
+}
+
+.tabla-final td:last-child {
+  font-weight: bold;
+  text-align: right;
+}
+
+.botones-resultado {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
