@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { calcularEdad } from '../js/eje4.js'
 import '../css/eje4.css'
 
-export default function Eje4Registro({ onAceptar }) {
+export default function Eje4Registro({ onAceptar, onVolver }) {
   const [fechaNac, setFechaNac] = useState('')
   const [edadOk, setEdadOk] = useState(false)
   const [rechazado, setRechazado] = useState(false)
@@ -30,6 +30,7 @@ export default function Eje4Registro({ onAceptar }) {
           setContador(5)
           setFechaNac('')
           setEdadOk(false)
+          onVolver()
         }
       }, 1000)
     } else {
@@ -62,7 +63,7 @@ export default function Eje4Registro({ onAceptar }) {
       <div className="eje4-wrapper">
         <div className="rechazo-card">
           <h2>Acceso Denegado</h2>
-          <p>Lo sentimos, debe tener minimo 21 anhos para participar en el juego.</p>
+          <p>Lo sentimos, debe tener minimo 21 anos para participar en el juego.</p>
           <p>Redirigiendo en <strong>{contador}</strong> segundos...</p>
         </div>
       </div>
@@ -72,6 +73,9 @@ export default function Eje4Registro({ onAceptar }) {
   return (
     <div className="eje4-wrapper">
       <div className="registro-card">
+        <button className="btn-secundario" onClick={onVolver}>
+          Volver al menu
+        </button>
         <h1>Juego de Dados</h1>
 
         {!edadOk && (
