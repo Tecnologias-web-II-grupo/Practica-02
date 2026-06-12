@@ -47,7 +47,7 @@ export default function Problema1Detalle({ serie, onVolver }) {
         </div>
         
         <button className="boton-volver" onClick={onVolver}>
-          ← Volver a la lista
+          Volver a la lista
         </button>
       </div>
     </div>
