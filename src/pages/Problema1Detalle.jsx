@@ -5,7 +5,8 @@ export default function Problema1Detalle({ serie, onVolver }) {
     return <div>Selecciona una serie</div>
   }
 
-  //Prueba de ejecucucion 
+  //Prueba de ejecucucion de comando 
+  //nsisnijjwijwj
   const principalUrl = `/images/concepto/principales/${serie.imagen}`
   const miniUrl = `/images/concepto/minis/${serie.imagen}`
 
