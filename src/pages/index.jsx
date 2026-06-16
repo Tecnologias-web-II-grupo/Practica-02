@@ -20,7 +20,7 @@ const ejercicios = [
     titulo: 'Ejercicio 3',
     descripcion: 'Quiz de vocabulario estilo diccionario.',
     destino: 'eje3',
-    disponible: false,
+    disponible: true,
   },
   {
     id: 4,
