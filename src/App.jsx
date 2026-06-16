@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Index from './pages/Index.jsx'
 import Eje4Registro from './pages/Eje4Registro.jsx'
 import Eje4Juego from './pages/Eje4Juego.jsx'
 import Eje4Resultado from './pages/Eje4Resultado.jsx'
@@ -6,7 +7,7 @@ import Problema1Principal from './pages/Problema1Principal.jsx'
 import Problema1Detalle from './pages/Problema1Detalle.jsx'
 
 export default function App() {
-  const [ejercicio, setEjercicio] = useState('seleccion') // 'seleccion', 'eje4', 'problema1'
+  const [ejercicio, setEjercicio] = useState('seleccion')
   const [pantalla, setPantalla] = useState('registro')
   const [jugador, setJugador] = useState(null)
   const [serieSeleccionada, setSerieSeleccionada] = useState(null)
@@ -14,15 +15,15 @@ export default function App() {
   // --- Ejercicio 4 ---
   function irAJuego(datos) {
     setJugador(datos)
-    setPantalla('juego')
+    setPantalla('eje4-juego')
   }
 
   function irAResultado(datosFinales) {
     setJugador(datosFinales)
-    setPantalla('resultado')
+    setPantalla('eje4-resultado')
   }
 
-  function reiniciar() {
+  function volverAlMenu() {
     setJugador(null)
     setPantalla('registro')
     setEjercicio('seleccion')
@@ -64,7 +65,7 @@ export default function App() {
         <h1 style={{ color: 'white', fontSize: '2.5rem', textAlign: 'center', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
           Selecciona un Ejercicio
         </h1>
-        <button 
+        <button
           onClick={irAProblem1}
           style={{
             padding: '15px 40px',
@@ -82,7 +83,7 @@ export default function App() {
         >
           Problema 1 - Series Clásicas
         </button>
-        <button 
+        <button
           onClick={() => setEjercicio('eje4')}
           style={{
             padding: '15px 40px',
@@ -108,7 +109,7 @@ export default function App() {
   if (ejercicio === 'eje4') {
     return (
       <>
-        <button 
+        <button
           onClick={volverASeleccion}
           style={{
             position: 'fixed',
@@ -129,11 +130,11 @@ export default function App() {
         {pantalla === 'registro' && (
           <Eje4Registro onAceptar={irAJuego} />
         )}
-        {pantalla === 'juego' && (
+        {pantalla === 'eje4-juego' && (
           <Eje4Juego jugador={jugador} onFin={irAResultado} />
         )}
-        {pantalla === 'resultado' && (
-          <Eje4Resultado jugador={jugador} onReiniciar={reiniciar} />
+        {pantalla === 'eje4-resultado' && (
+          <Eje4Resultado jugador={jugador} onReiniciar={() => setPantalla('registro')} />
         )}
       </>
     )
@@ -143,7 +144,7 @@ export default function App() {
   if (ejercicio === 'problema1') {
     return (
       <>
-        <button 
+        <button
           onClick={volverASeleccion}
           style={{
             position: 'fixed',
