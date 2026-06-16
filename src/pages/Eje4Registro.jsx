@@ -73,9 +73,6 @@ export default function Eje4Registro({ onAceptar, onVolver }) {
   return (
     <div className="eje4-wrapper">
       <div className="registro-card">
-        <button className="btn-secundario" onClick={onVolver}>
-          Volver al menu
-        </button>
         <h1>Juego de Dados</h1>
 
         {!edadOk && (

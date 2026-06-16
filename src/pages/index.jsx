@@ -5,8 +5,8 @@ const ejercicios = [
     id: 1,
     titulo: 'Ejercicio 1',
     descripcion: 'Galeria de imagenes con pagina de detalle.',
-    destino: 'eje1',
-    disponible: false,
+    destino: 'problema1',
+    disponible: true,
   },
   {
     id: 2,
