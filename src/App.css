@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container, .factura {
+  width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.combos button {
+  margin: 5px;
+}
+
+.botones {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px;
+}  
